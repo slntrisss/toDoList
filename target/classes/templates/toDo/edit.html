@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit List</title>
+</head>
+<body>
+    <form th:method="PATCH" th:action="@{/{id}(id=${list.getId()})}" th:object="${list}">
+        <label for="name">Enter a name: </label>
+        <input type="text" id="name" th:field="*{name}">
+        <br/>
+        <label for="date">Enter a date: </label>
+        <input type="text" id="date" th:field="*{date}">
+        <br/>
+        <label for="priority">Enter a priority: </label>
+        <input type="text" id="priority" th:field="*{priority}">
+        <br/>
+        <label for="description">Enter a description: </label>
+        <input type="text" id="description" th:field="*{description}">
+        <br/>
+        <label for="isDone">Enter a description: </label>
+        <input type="text" id="isDone" th:field="*{done}">
+        <br/>
+        <input type="submit" value="Update!">
+    </form>
+</body>
+</html>

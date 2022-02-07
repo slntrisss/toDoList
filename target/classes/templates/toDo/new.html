@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>New List</title>
+</head>
+<body>
+    <form th:method="POST" th:action="@{/index}">
+        <label for="name">Enter a name: </label>
+        <input type="text" id="name">
+        <br/>
+        <label for="date">Enter a date: </label>
+        <input type="text" id="date">
+        <br/>
+        <label for="priority">Enter a priority: </label>
+        <input type="text" id="priority">
+        <br/>
+        <label for="description">Enter a description: </label>
+        <input type="text" id="description">
+        <br/>
+        <input type="submit" value="Create!">
+    </form>
+</body>
+</html>
